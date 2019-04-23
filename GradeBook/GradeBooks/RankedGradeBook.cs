@@ -13,7 +13,7 @@ namespace GradeBook.GradeBooks
 
         public override char GetLetterGrade(double averageGrade)
         {
-            if (Students.Count <= 5)
+            if (Students.Count < 5)
                 throw new InvalidOperationException();
 
             var cutoff = (int)Math.Ceiling(Students.Count * 0.2);
